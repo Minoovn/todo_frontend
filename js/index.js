@@ -24,7 +24,6 @@ input.addEventListener('keypress', (event) => {
     }
 })
 
-input.disabled = true
 
 const renderTask = (task) => {
     const li = document.createElement('li')
