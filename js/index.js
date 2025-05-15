@@ -2,7 +2,7 @@
 const BACKEND_ROOT_URL = 'https://todo-backend-qjfh.onrender.com'
 
 import {Todos} from './class/Todos.js'
-const todos = new Todos(BACKEND_ROOT_URL)
+const todos = new Todos('https://todo-backend-qjfh.onrender.com')
 
 const list = document.querySelector('ul')
 const input = document.querySelector('input')
