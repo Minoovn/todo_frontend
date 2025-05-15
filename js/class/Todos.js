@@ -10,7 +10,7 @@ class Todos {
 
     getTasks() {
         return new Promise((resolve, reject) => {
-            fetch(this.#backend_url)
+            fetch(this.#backend_url + '/')
 
                 .then(response => response.json())
                 .then(json => {
@@ -26,7 +26,7 @@ class Todos {
     addTask(text) {
         return new Promise(async(resolve, reject) => {
             const json = JSON.stringify({ description: text })
-            fetch(this.#backend_url , {
+            fetch(this.#backend_url + '/new', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: json
